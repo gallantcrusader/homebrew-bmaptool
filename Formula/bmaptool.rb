@@ -50,10 +50,7 @@ class Bmaptool < Formula
   end
 
   test do
-    # Verify the tool runs
     system bin/"bmaptool", "--help"
-
-    # Test bmap creation on a small file
     testfile = testpath/"test.img"
     testfile.write("\0" * 4096)
     system bin/"bmaptool", "create", testfile
